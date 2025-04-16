@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA Favorite Restaurants</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Favorite LA Restaurants</h1>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search restaurants or cuisine...">
+    <select id="sort">
+      <option value="name">Sort by Name</option>
+      <option value="cuisine">Sort by Cuisine</option>
+      <option value="rating">Sort by Rating</option>
+    </select>
+    <button onclick="addRestaurant()">Add Restaurant</button>
+    <button onclick="removeRestaurant()">Remove Restaurant</button>
+    <button onclick="resetRestaurants()">Reset</button>
+  </div>
+
+  <div class="card-container" id="restaurantContainer"></div>
+
+  <template id="restaurant-template">
+    <div class="card">
+      <img src="" alt="Restaurant image">
+      <div class="card-content">
+        <h3></h3>
+        <p class="cuisine"></p>
+        <p class="rating"></p>
+        <ul class="features"></ul>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
